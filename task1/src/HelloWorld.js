@@ -1,6 +1,7 @@
 class HelloWorld {
 	constructor(element) {
 		this.element = element;
+		this.hello();
 	}
 
 	hello() {

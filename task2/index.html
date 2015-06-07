@@ -7,13 +7,14 @@
 	<div id="container"></div>
 	<script>
 		System.config({
+		  defaultJSExtensions: true,
 		  map: {
 		    traceur: 'bower_components/traceur/traceur.js'
 		  }
 		});
 		System.import('src/HelloWorld.js').then(function(HelloWorld) {
 			var container = document.querySelector('#container');
-			var helloWorld = new HelloWorld.default(container);
+			window.helloWorld = new HelloWorld.default(container, {name: 'Maira'});
 		});
 	</script>
 </body>
