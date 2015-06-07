@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="bower_components/system.js/dist/system.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<script>
+		System.config({
+		  map: {
+		    traceur: 'bower_components/traceur/traceur.js'
+		  }
+		});
+		System.import('src/HelloWorld.js').then(function(HelloWorld) {
+			var container = document.querySelector('#container');
+			var helloWorld = new HelloWorld.default(container);
+			helloWorld.hello();
+		});
+	</script>
+</body>
+</html>
