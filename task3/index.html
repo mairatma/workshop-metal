@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="bower_components/soyutils/soyutils.js"></script>
 	<script src="bower_components/system.js/dist/system.js"></script>
 </head>
 <body>
@@ -10,11 +11,14 @@
 		  defaultJSExtensions: true,
 		  map: {
 		    traceur: 'bower_components/traceur/traceur.js'
+		  },
+		  paths: {
+		    'bower:*': 'bower_components/*'
 		  }
 		});
 		System.import('src/HelloWorld.js').then(function(HelloWorld) {
 			var container = document.querySelector('#container');
-			window.helloWorld = new HelloWorld.default({element: container, name: 'Maira'});
+			window.helloWorld = new HelloWorld.default({name: 'Maira'}).render(container);
 		});
 	</script>
 </body>

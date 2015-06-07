@@ -1,22 +1,24 @@
 import Attribute from '../bower_components/metal/src/attribute/Attribute';
 
 class HelloWorld extends Attribute {
-	constructor(element, opt_config) {
+	constructor(opt_config) {
 		super(opt_config);
-		this.element = element;
 
 		this.hello();
 		this.on('nameChanged', this.hello.bind(this));
 	}
 
 	hello() {
-		this.element.innerHTML = 'Hello ' + this.name;
+		this.element.innerHTML = 'Hello World!<div>My name is ' +  this.name + '</div>';
 	}
 };
 
 HelloWorld.ATTRS = {
+	element: {
+		value: null
+	},
 	name: {
-		value: 'World'
+		value: 'unknown'
 	}
 }
 
