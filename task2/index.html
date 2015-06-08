@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"></link>
 	<script src="bower_components/system.js/dist/system.js"></script>
 </head>
 <body>
@@ -12,9 +13,9 @@
 		    traceur: 'bower_components/traceur/traceur.js'
 		  }
 		});
-		System.import('src/HelloWorld.js').then(function(HelloWorld) {
+		System.import('src/Panel.js').then(function(Panel) {
 			var container = document.querySelector('#container');
-			window.helloWorld = new HelloWorld.default({element: container, name: 'Maira'});
+			window.panel = new Panel.default({element: container});
 		});
 	</script>
 </body>

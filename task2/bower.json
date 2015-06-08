@@ -15,6 +15,7 @@
   "dependencies": {
     "system.js": "~0.17.1",
     "traceur": "~0.0.90",
-    "metal": "~0.3.0"
+    "metal": "~0.3.0",
+    "bootstrap": "~3.3.4"
   }
 }

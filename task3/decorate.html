@@ -6,7 +6,14 @@
 	<script src="bower_components/system.js/dist/system.js"></script>
 </head>
 <body>
-	<div id="container"></div>
+	<div id="panel" class="panel component panel-default">
+		<div class="panel-heading">
+			<div id="panel-title">Title</div>
+		</div>
+		<div class="panel-body">
+			<div id="panel-body">Body</div>
+		</div>
+	</div>
 	<script>
 		System.config({
 		  defaultJSExtensions: true,
@@ -18,8 +25,8 @@
 		  }
 		});
 		System.import('src/Panel.js').then(function(Panel) {
-			var container = document.querySelector('#container');
-			window.panel = new Panel.default({element: container}).render();
+			var container = document.querySelector('#panel');
+			window.panel = new Panel.default({element: container}).decorate();
 		});
 	</script>
 </body>
