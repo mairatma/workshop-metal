@@ -3,7 +3,9 @@
 import Panel from '../src/Panel';
 
 describe('Panel', function() {
-	it('should be tested', function() {
-		assert.fail('No tests for this module yet.');
+	it('should set visible to false when "hide" method is called', function() {
+		var panel = new Panel().render();
+		panel.hide();
+		assert.ok(!panel.visible);
 	});
 });
