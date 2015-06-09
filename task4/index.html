@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"></link>
+	<script src="bower_components/soyutils/soyutils.js"></script>
+	<script src="bower_components/system.js/dist/system.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<script>
+		System.config({
+		  defaultJSExtensions: true,
+		  map: {
+		    traceur: 'bower_components/traceur/traceur.js'
+		  },
+		  paths: {
+		    'bower:*': 'bower_components/*'
+		  }
+		});
+		System.import('src/Panel.js').then(function(Panel) {
+			var container = document.querySelector('#container');
+			window.panel = new Panel.default({element: container}).render();
+		});
+	</script>
+</body>
+</html>
