@@ -1,0 +1,24 @@
+{
+	"name": "alloy-panel",
+	"version": "0.0.0",
+	"description": "asdas",
+	"main": "src/Panel.js",
+	"moduleType": [
+		"es6"
+	],
+	"keywords": [
+		"metal",
+		"alloy"
+	],
+	"ignore": [
+		"*",
+		"!src/**/*"
+	],
+	"dependencies": {
+		"jquery": "~2.1.4",
+		"metal": "metal/metal.js#master",
+		"metal-jquery-adapter": "metal/metal-jquery-adapter#master",
+		"bootstrap": "~3.3.4",
+		"soyutils": "2014.04.22"
+	}
+}
