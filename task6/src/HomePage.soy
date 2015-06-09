@@ -1,0 +1,26 @@
+{namespace Templates.HomePage}
+
+/**
+ */
+{template .content}
+	<h1>Home Page</h1>
+	<button type="button" data-onclick="Modal:show">Open Modal</button>
+	{delcall HomePage.panel data="all" /}
+{/template}
+
+/**
+ * @param panelTitle
+ */
+{template .panel}
+	{delcall Modal}
+		{param id: 'Modal' /}
+		{param header: 'Modal header' /}
+		{param body kind="html"}
+			{delcall Panel}
+				{param title: $panelTitle /}
+				{param body: 'Home Page Body' /}
+			{/delcall}
+		{/param}
+		{param visible: false /}
+	{/delcall}
+{/template}

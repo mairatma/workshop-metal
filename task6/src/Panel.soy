@@ -1,0 +1,30 @@
+{namespace Templates.Panel}
+
+/**
+ * Renders the main content.
+ */
+{template .content}
+	<div class="panel-heading">
+		{delcall Panel.title data="all" /}
+	</div>
+	<div class="panel-body">
+		{delcall Panel.body data="all" /}
+	</div>
+{/template}
+
+/**
+ * @param title
+ */
+{template .title}
+	<button type="button" class="close" data-onclick="hide" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	</button>
+	{$title}
+{/template}
+
+/**
+ * @param body
+ */
+{template .body}
+	{$body}
+{/template}
