@@ -5,10 +5,6 @@ import SoyComponent from 'bower:metal/src/soy/SoyComponent';
 import './Panel.soy';
 
 class Panel extends SoyComponent {
-	constructor(opt_config) {
-		super(opt_config);
-	}
-
 	hide() {
 		this.visible = false;
 	}
